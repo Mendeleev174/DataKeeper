@@ -1,0 +1,317 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\DataKeeper.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\DataKeeper.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DATAKEEPER_DIALOG DIALOGEX 0, 0, 302, 170
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "DataKeeper"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_HOUR,35,15,20,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MINUTE,35,35,20,14,ES_AUTOHSCROLL
+    LTEXT           "Часы",IDC_STATIC,8,18,20,8
+    LTEXT           "Минуты",IDC_STATIC,7,37,27,8
+    LTEXT           "День недели",IDC_STATIC,65,18,45,8
+    COMBOBOX        IDC_DAY,115,15,65,65,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Резервировать каждый день?",IDC_EVERYDAY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,66,36,117,10
+    GROUPBOX        "Временные установки",IDC_STATIC,5,5,180,50
+    CONTROL         "Да",IDC_ENDYES,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    230,20,26,10
+    CONTROL         "Нет",IDC_ENDNO,"Button",BS_AUTORADIOBUTTON,230,35,29,10
+    GROUPBOX        "Резервировать в выходные?",IDC_STATIC,190,5,105,50,
+                    BS_CENTER
+    LTEXT           "База",IDC_STATIC,11,71,20,8
+    EDITTEXT        IDC_BASEPATH,33,69,242,14,ES_AUTOHSCROLL
+    LTEXT           "Архив",IDC_STATIC,11,91,20,8
+    EDITTEXT        IDC_ARCPATH,33,89,242,14,ES_AUTOHSCROLL
+    LTEXT           "Команда ОС",IDC_STATIC,11,111,43,8
+    EDITTEXT        IDC_KEYPATH,55,109,220,14,ES_AUTOHSCROLL
+    LTEXT           "%b",IDC_STATIC,280,70,10,8
+    LTEXT           "%a",IDC_STATIC,280,90,10,8
+    GROUPBOX        "Пути",IDC_STATIC,5,57,290,72
+    EDITTEXT        IDC_NOWTIME,249,154,45,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    DEFPUSHBUTTON   "Обновить",IDC_UPDATE,6,135,60,14
+    PUSHBUTTON      "О программе...",IDC_ABOUT,158,135,60,14
+    PUSHBUTTON      "Сохранить...",IDC_SAVER,82,135,60,14
+    PUSHBUTTON      "Резервировать",IDC_RESNOW,234,135,60,14
+    LTEXT           "Текущее время :",IDC_STATIC,186,155,60,8
+END
+
+IDD_DIALOGSAVER DIALOG DISCARDABLE  0, 0, 182, 86
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Сохранить..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,31,65,50,14
+    PUSHBUTTON      "Отмена",IDCANCEL,101,65,50,14
+    CONTROL         "пути",IDC_SAVE3,"Button",BS_AUTOCHECKBOX | BS_LEFT | 
+                    WS_TABSTOP,28,40,120,10
+    GROUPBOX        "",IDC_STATIC,15,0,150,55
+    CONTROL         "резервирование по выходным",IDC_SAVE2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,28,25,125,10
+    CONTROL         "временные установки",IDC_SAVE1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,28,10,120,10
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 247, 151
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "About DataKeeper"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "DataKeeper Version 1.0",IDC_STATIC,110,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Россия,  г. Челябинск. 2001 год.",IDC_STATIC,110,20,119,
+                    8
+    DEFPUSHBUTTON   "OK",IDOK,99,130,50,14,WS_GROUP
+    CONTROL         147,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,10,10,79,
+                    92
+    CONTROL         "_____________________________________________________________",
+                    IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,10,115,
+                    230,8
+    LTEXT           "Щербинин Александр Сергеевич",IDC_STATIC,83,107,120,8
+    LTEXT           "Программирование:",IDC_STATIC,10,107,70,8
+    LTEXT           "a.k.a. -=AS=-",IDC_STATIC,198,107,45,8
+    LTEXT           "Не для свободного пользования!",IDC_STATIC,110,30,120,8
+    LTEXT           "Всеми правами на пользование данным",IDC_STATIC,110,40,
+                    120,8
+    LTEXT           "программного продукта",IDC_STATIC,110,60,120,8
+    LTEXT           "обладает ОАО ""Электромаш"".",IDC_STATIC,110,70,120,8
+    LTEXT           "настоящей копией данного",IDC_STATIC,110,50,120,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DATAKEEPER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 292
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_DIALOGSAVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 175
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DATAKEEPER_DIALOG DLGINIT
+BEGIN
+    IDC_DAY, 0x403, 12, 0
+0xeecf, 0xe5ed, 0xe5e4, 0xfceb, 0xe8ed, 0x00ea, 
+    IDC_DAY, 0x403, 8, 0
+0xf2c2, 0xf0ee, 0xe8ed, 0x00ea, 
+    IDC_DAY, 0x403, 6, 0
+0xf0d1, 0xe4e5, 0x00e0, 
+    IDC_DAY, 0x403, 8, 0
+0xe5d7, 0xe2f2, 0xf0e5, 0x00e3, 
+    IDC_DAY, 0x403, 8, 0
+0xffcf, 0xedf2, 0xf6e8, 0x00e0, 
+    IDC_DAY, 0x403, 8, 0
+0xf3d1, 0xe1e1, 0xf2ee, 0x00e0, 
+    IDC_DAY, 0x403, 12, 0
+0xeec2, 0xeaf1, 0xe5f0, 0xe5f1, 0xfced, 0x00e5, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAPAS            BITMAP  DISCARDABLE     "res\\bitmapas.bmp"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "DataKeeper MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "DataKeeper\0"
+            VALUE "LegalCopyright", "Copyright (C) 2001\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "DataKeeper.EXE\0"
+            VALUE "ProductName", "DataKeeper Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About DataKeeper..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\DataKeeper.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
